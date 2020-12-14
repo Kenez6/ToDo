@@ -1,0 +1,99 @@
+html {
+    font-family: 'Noto Sans';
+    background-color: #9ad3bc;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    color:#f3eac2;
+    text-align: center;
+    font-size: 50px;
+    font-stretch: 10px;
+    letter-spacing: 6px;
+}
+.panel {
+    background-color: #f5b461;
+    align-items: center;
+    max-width: 500px;
+    padding: 50px;
+    padding-top: 10px;
+    margin:50px;
+    min-height: 500px;
+    text-align: center;
+    border-radius: 50px;
+}
+#addButton {
+    color: #16697a;
+    font-family: 'Noto Sans';
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background-color: #f8f1f1;
+    box-shadow: #16697a;
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+    margin: 10px;
+}
+#newToDo {
+    border: none;
+    height: 35px;
+    margin: none;
+    justify-content: center;
+    background-color: #f8f1f1;
+    font-family: 'Noto Sans';
+    border-radius: 50px;
+    text-align: center;
+    color:#16697a;
+    font-weight: bolder;
+}
+li {
+    font-family: 'Noto Sans';
+    color: #f5b461;
+    font-weight: bolder;
+    list-style-type: none;
+    margin: 5px;
+    border: none;
+    padding: 5px;
+    background-color: #f8f1f1;
+    border-radius: 20px;
+    text-align: center;
+    align-items: left;
+    list-style-position: outside;
+    justify-content: center;
+
+}
+.deleteButton {
+    color: #ec524b;
+    font-family: 'Noto Sans';
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    border: none;
+    background-color: #f8f1f1;
+    margin: 10px;
+    margin-left: 0px;
+    border-radius: 20px;
+}
+.doneButton {
+    color: #ec524b;
+    font-family: 'Noto Sans';
+    font-weight: 20px;
+    font-size: larger;
+    text-align: center;
+    border: none;
+    background-color: #f8f1f1;
+    margin: 10px;
+    border-radius: 20px;
+    
+    
+}
+container {
+    display: flex;
+    justify-content: center;
+}
+
+
