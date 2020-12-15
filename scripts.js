@@ -1,29 +1,39 @@
-var counter = 1
+$(document).ready(function(){
 
-function newListItem(){
-    var newListItem = $("#newToDo").val();
-    var DONEbuttonID = 'DONEbutton'+counter;
-    var DELbuttonID = 'DELbutton'+counter;
-    var listItemID = 'li'+counter
-    var doneButton = ('<button type=button class="doneButton" id='+DONEbuttonID+'>&#10003</button>');
-    var deleteButton = ('<button type=button class= "deleteButton" id='+DELbuttonID+'>X</button>');
-    $("#myUL").append('<li id='+listItemID+'>'+ newListItem + doneButton + deleteButton +'</li>');
-    $('#'+DELbuttonID).on('click', () => {
-        $('#'+listItemID).remove();
-    });
-    $('#'+DONEbuttonID).on('click', () => {
-        $('#'+listItemID).css("text-decoration", "line-through")
-        $('#'+listItemID).css("color", "#ec524b")
-    });
+
+    function newListItem(){
     
-    return counter = counter +1;
-}
+        let input =  $('#newToDo').val();
 
-$("#addButton").on('click', () => {
-    newListItem();
-    document.getElementById("newToDo").value = "";
-});
+        if(input){
+            let doneButton = ('<button type=button class="doneButton">&#10003</button>');
+            let deleteButton = ('<button type=button class="deleteButton" >x</button>');
+        
+            $("#myUL").append('<li>'+ input + doneButton + deleteButton +'</li>');             
+            }
+            else{
+                alert("Give a name to the item");
+            }
 
+    }
+
+        
+    $("#addButton").on('click', () => {
+                newListItem();           
+                $("#newToDo").val('');
+    }),
+
+    $('ul').on('click', 'button.deleteButton', function () {
+        $(this).parent().remove();
+    }),
+
+    $('ul').on('click', 'button.doneButton', function() {
+        $(this).parent().css("text-decoration", "line-through");
+        $(this).parent().css("color", "#ec524b");
+    })
+    
+
+})
 
 
 
